@@ -24,6 +24,7 @@ n == matrix[i].length
 1 <= m, n <= 100
 -104 <= matrix[i][j], target <= 104
 */
+//-----------------------------------------------1st approach---------------------------------------
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         boolean flag=false;
@@ -41,3 +42,25 @@ class Solution {
 /*Runtime: 1 ms, faster than 38.72% of Java online submissions for Search a 2D Matrix.
 Memory Usage: 43.3 MB, less than 11.75% of Java online submissions for Search a 2D Matrix.
 Next challenges:*/
+//---------------------------------------------2nd approach-------------------------------------
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        boolean flag=false;
+        int row=matrix.length;
+        int col=matrix[0].length;
+        int r=0,c=col-1;
+        
+        while(r < row && c >= 0){
+            if(matrix[r][c] == target){
+                flag= true;
+            }
+            if(target > matrix[r][c]) r++;
+            else c--;
+        }
+       return flag; 
+    }
+}
+/*
+More optimised solution: Runtime: 0 ms, faster than 100.00% of Java online submissions for Search a 2D Matrix.
+Memory Usage: 42.3 MB, less than 77.13% of Java online submissions for Search a 2D Matrix
+*/
