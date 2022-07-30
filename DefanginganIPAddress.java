@@ -20,7 +20,7 @@ Constraints:
 The given address is a valid IPv4 addres
 
 */
-//--------------------------brute force method --------------------------
+//--------------------------brute force method --------------------------t=11ms---------------------
 class Solution {
     public String defangIPaddr(String address) {
         String add="[.]";
@@ -35,5 +35,12 @@ class Solution {
             }
         }
         return res;
+    }
+}
+//--------------------1 line code -----------------------------------------t=0ms------------------------
+
+class Solution {
+    public String defangIPaddr(String address) {
+       return address.replace(".","[.]");
     }
 }
