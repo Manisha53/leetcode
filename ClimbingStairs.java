@@ -1,10 +1,13 @@
 // Time limit exceeds for 2 test cases viz. when n=44&45------------recursive solution-----------
 class Solution {
-    public int climbStairs(int n) {
-        if(n<=1) return 1;
-        else return (climbStairs(n-1)+climbStairs(n-2));
-    }
+public int climbStairs(int n) {
+if(n==1) return 1;
+else if(n==2) return 2;
+else return (climbStairs(n-1)+climbStairs(n-2));
 }
+}
+
+/*31 / 45 test cases passed.
 
 //***********dp solution****************************
 class Solution {
