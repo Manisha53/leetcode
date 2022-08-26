@@ -21,6 +21,7 @@ n == nums.length
 1 <= n <= 5 * 104
 -109 <= nums[i] <= 109
 */
+//----------------------using array-------efficient solution-------------------
 class Solution {
     public int majorityElement(int[] nums) {
         int c=1,res=0;
@@ -46,5 +47,25 @@ class Solution {
         }
        
         return res;
+    }
+}
+//------------using hashmap-------------comparatively less efficient--------------------
+class Solution {
+    public int majorityElement(int[] nums) {
+        HashMap<Integer, Integer> map=new HashMap<>();
+        int majority=-1;
+        
+        for(int i=0;i<nums.length;i++){
+            if(map.get(nums[i])==null) map.put(nums[i],1);
+            else map.put(nums[i],map.get(nums[i])+1);
+        }
+        
+        for(Map.Entry<Integer,Integer>entry:map.entrySet()){
+            if(entry.getValue()>nums.length/2){
+                 majority=entry.getKey();
+                 break;
+            }
+        }
+        return majority;
     }
 }
