@@ -17,7 +17,11 @@ Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
 
 */
-*/USING FOR LOOP - WAY-1 ====07/14/2022 17:35 Accepted 26 ms 72.6 MB java
+
+
+//USING FOR LOOP - WAY-1 ====07/14/2022 17:35 Accepted 26 ms 72.6 MB java
+
+
 
 class Solution {
 public boolean containsDuplicate(int[] nums) {
@@ -32,7 +36,11 @@ break;
 return flag;
 }
 }
-*/USING HASHSET WAY-2 ====08/27/2022 13:17 Accepted 15 ms 70.5 MB java
+
+
+//USING HASHSET WAY-2 ====08/27/2022 13:17 Accepted 15 ms 70.5 MB java
+
+
 
 class Solution {
 public boolean containsDuplicate(int[] nums) {
