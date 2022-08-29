@@ -1,7 +1,6 @@
 /*
 Runtime: 2 ms, faster than 68.46% of Java online submissions for Backspace String Compare.
 Memory Usage: 41.6 MB, less than 82.43% of Java online submissions for Backspace String Compare.
-
 */
 class Solution {
 public boolean backspaceCompare(String s, String t) {
