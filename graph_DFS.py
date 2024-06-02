@@ -1,3 +1,5 @@
+# DFS can be implemented using stack data structure. Push the source into the stack. Then pop the topmost element from stack and print it. Push the neighbours of the popped element back into the stack and repeate the process.
+
 graph = {
 	"a": ["b","d"],
     "b": [],
@@ -17,3 +19,12 @@ def dfs (graph, source):
       stack.append(neighbour)
       
 dfs(graph, "a")
+
+output:
+a
+d
+g
+f
+e
+c
+b
